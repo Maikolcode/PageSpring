@@ -1,6 +1,9 @@
 package com.reto.cliclo3.ciclo3.model;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name="gama")
@@ -11,6 +14,18 @@ public class Gama implements Serializable {
     private Integer idGama;
     private String name;
     private String description;
+
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "gama")
+    @JsonIgnoreProperties("gama")
+    public List<Car> cars;
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 
     public Integer getIdGama() {
         return idGama;
