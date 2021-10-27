@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 //sudo firewall-cmd --zone=public -add-port=8080/tcp --permanent -> Open port 8080
 //sudo netstat -plten -> Information ports open or in process
-//kill -9 numproces -> Kill the process
+//sudo kill -9 numproces -> Kill the process
 
 @EntityScan(basePackages = {"com.reto.cliclo3.ciclo3.model"})
 @SpringBootApplication
