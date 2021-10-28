@@ -236,7 +236,7 @@
 .hidden{
     display: none !important;
 }
-.table-car-add, .table-client-add, .table-message-add{
+.table-car-add, .table-client-add, .table-message-add, .table-gama-add, .table-reservation-add{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -250,4 +250,7 @@
 .img-message-tb img{
     width: 200px;
     height: 200px;
+}
+.test-css{
+    color: blueviolet;
 }

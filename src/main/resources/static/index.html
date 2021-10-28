@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width">
     <base href="/">
     <link rel="shortcut icon" href="config-view/images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="config-view/style.css">
+    <link rel="stylesheet" href="config-view/stylePage.css">
     <link rel="stylesheet" type="text/css" href="webjars/bootstrap/5.1.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -25,13 +25,19 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/cars.html">Carros</a>
+                        <a class="nav-link" href="pages/cars/cars.html">Carros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cliente/cliente.html">Clientes</a>
+                        <a class="nav-link" href="pages/clients/client.html">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mensaje/mensaje.html">Mensaje</a>
+                        <a class="nav-link" href="pages/gamas/gama.html">Gamas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/messages/message.html">Mensajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/reservations/reservation.html">Reservaciones</a>
                     </li>
                 </ul>
             </div>
@@ -82,6 +88,31 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </div>
+
+    <div class="contenedor-titulo">
+        <p class="txt-titulo">Lista de gamas</p>
+    </div>
+
+    <div class="contenedor-tablas">
+        <div class="table-gama-add" id="tb-gama-hd">
+        </div>
+        <table id="table-gama" class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Mensaje</th>
+                <th scope="col">Detalles</th>
+            </tr>
+            </thead>
+            <tbody class="carga-lista-gama">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="separador-img">
+        <div class="linea"><p></p></div>
     </div>
 
     <div class="contenedor-titulo">
@@ -163,13 +194,40 @@
         <div class="linea"><p></p></div>
     </div>
 
+    <div class="contenedor-titulo">
+        <p class="txt-titulo">Lista de reservaciones</p>
+    </div>
+
+    <div class="contenedor-tablas">
+        <div class="table-reservation-add" id="tb-reservation-hd">
+        </div>
+        <table id="table-reservation" class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Fecha de inicio</th>
+                <th scope="col">Fecha de devolución</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Detalles</th>
+            </tr>
+            </thead>
+            <tbody class="carga-lista-reservation">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="separador-img">
+        <div class="linea"><p></p></div>
+    </div>
+
+
     <div class="footer">
         Michael Parra | Bogotá D.C
     </div>
 
     <script type="text/javascript" src="webjars/jquery/3.6.0/jquery.js"></script>
+    <script type="text/javascript" src="config-view/listaService.js"></script>
     <script type="text/javascript" src="webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="config-view/listasService.js"></script>
     <script>
         cargarListas();
     </script>
